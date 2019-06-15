@@ -109,3 +109,21 @@ r.compose(
   l.log,
   r.head
 )(articles)
+
+/**
+ * Category Theory
+ * It's like add().
+ * - compose:
+ *   (b->c)->(a->b)->(a->c)
+ * - id:
+ *   a->a
+ * Composition and identity to form a category.
+ *
+ * Category Laws:
+ * - left identity
+ *   compose(id, f) == f
+ * - right identity
+ *   compose(f, id) == f
+ * - associativity
+ *   compose(compose(f, g), h) == compose(f, compose(g, h))
+ */
