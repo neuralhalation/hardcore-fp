@@ -202,3 +202,14 @@ console.log(eitherEx3('duh'))
  * it takes a function as its value
  * calls the function with its result once it's there
 */
+
+// http://jsbin.com/yikoqi/
+
+/*
+ - Functor Laws -
+ -- identity --
+ map(id) == id
+
+ -- composition --
+ compose(map(f), map(g)) == map(compose(f, g))
+*/
