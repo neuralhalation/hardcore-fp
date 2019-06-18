@@ -27,11 +27,14 @@
   "homepage": "https://github.com/neuralhalation/hardcore-fp#readme",
   "dependencies": {
     "eslint": "^5.16.0",
+    "fantasy-io": "0.0.1",
+    "fantasy-land": "^4.0.1",
     "husky": "^2.4.0",
     "jquery": "^3.4.1",
     "prettier": "^1.18.2",
     "pretty-quick": "^1.11.0",
     "ramda": "^0.26.1",
+    "sanctuary": "^2.0.0",
     "tslint": "^5.17.0"
   },
   "devDependencies": {
