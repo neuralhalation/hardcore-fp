@@ -26,15 +26,22 @@
   },
   "homepage": "https://github.com/neuralhalation/hardcore-fp#readme",
   "dependencies": {
+    "bacon": "0.0.1",
+    "data.either": "^1.5.2",
     "eslint": "^5.16.0",
     "fantasy-io": "0.0.1",
     "fantasy-land": "^4.0.1",
+    "folktale": "^2.3.2",
     "husky": "^2.4.0",
     "jquery": "^3.4.1",
+    "pointfree": "0.0.1",
+    "pointfree-fantasy": "^0.1.3",
     "prettier": "^1.18.2",
     "pretty-quick": "^1.11.0",
     "ramda": "^0.26.1",
+    "requirejs": "^2.3.6",
     "sanctuary": "^2.0.0",
+    "socketio": "^1.0.0",
     "tslint": "^5.17.0"
   },
   "devDependencies": {
