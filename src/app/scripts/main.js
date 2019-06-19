@@ -1,4 +1,4 @@
-require.config({
+requirejs.config({
   baseUrl: '/scripts',
   paths: {
     jquery: '../../node_modules/jquery/dist/jquery.min',
@@ -10,8 +10,6 @@ require.config({
     socketio: '../../node_modules/socket.io/lib/socket',
   },
 })
-require(['jquery', 'app'], function($, app) {
-  'use strict'
-
+requirejs(['jquery', 'app'], function($, app) {
   $(app)
 })
