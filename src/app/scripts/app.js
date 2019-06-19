@@ -6,6 +6,7 @@ const Player = require('./player')
 const io = require('./io')
 const bacon = require('baconjs')
 const http = require('./http')
+const l = require('lodash')
 
 io.extendFn()
 
@@ -32,6 +33,9 @@ const getData = _.curry(function(name, elt) {
 const last = function(ar) {
   return ar[ar.length - 1]
 }
+const getProp = _.curry(function(propertyName, element) {
+  return element.prop(propertyName)
+})
 
 const apiKey = 'AIzaSyAWoa7aqds2Cx_drrrb5FPsRObFa7Dxkfg'
 
@@ -41,8 +45,8 @@ const apiKey = 'AIzaSyAWoa7aqds2Cx_drrrb5FPsRObFa7Dxkfg'
  * eventValue :: DomEvent -> String
  */
 const eventValue = compose(
-  _.prop('value'),
-  _.prop('target')
+  l.get('value'),
+  l.get('target')
 )
 
 /**
@@ -85,9 +89,7 @@ const getInputStream = compose(
  * @param {obj} e
  */
 const render = function(e) {
-  return $(
-    `<li/>, ${{ text: e.snippet.title, 'data-youtubeid': e.id.videoId }}`
-  )
+  return $('<li/>', { text: e.snippet.title, 'data-youtubeid': e.id.videoId })
 }
 
 /**
@@ -95,7 +97,7 @@ const render = function(e) {
  */
 const videoEntries = compose(
   map(render),
-  _.prop('items')
+  l.get('items')
 )
 
 /**
@@ -110,7 +112,7 @@ const search = compose(
  * clickStream :: DomElement -> EventStream DomElement
  */
 const clickStream = compose(
-  map(_.prop('target')),
+  map(l.get('target')),
   listen('click')
 )
 
