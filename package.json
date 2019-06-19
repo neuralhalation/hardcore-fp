@@ -27,6 +27,7 @@
   "homepage": "https://github.com/neuralhalation/hardcore-fp#readme",
   "dependencies": {
     "bacon": "0.0.1",
+    "baconjs": "^3.0.3",
     "data.either": "^1.5.2",
     "eslint": "^5.16.0",
     "fantasy-io": "0.0.1",

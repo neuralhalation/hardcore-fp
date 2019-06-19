@@ -4,7 +4,7 @@ const P = require('pointfree-fantasy')
 const Maybe = require('./maybe')
 const Player = require('./player')
 const io = require('./io')
-const bacon = require('bacon')
+const bacon = require('baconjs')
 const http = require('./http')
 
 io.extendFn()
@@ -24,7 +24,7 @@ const setHtml = _.curry(function(sel, x) {
   return $(sel).html(x)
 })
 const listen = _.curry(function(event, target) {
-  return bacon.fromEventTarget(target, event)
+  return bacon.fromEvent(target, event)
 })
 const getData = _.curry(function(name, elt) {
   return $(elt).data(name)
